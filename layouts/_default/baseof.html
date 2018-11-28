@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ .Page.Title }} &ndash; {{ .Site.Title }}{{ end }}</title>
+  </head>
+  <body>
+    {{ block "header" . }}
+      {{ partial "header.html" . }}
+    {{ end }}
+    {{ block "main" . }}{{ end }}
+    {{ block "footer" . }}{{ end }}
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <h1>Blog</h1>
+
+  <p>
+    Sometimes I write about random things that I found interesting or had
+    trouble with. I am by no means an expert on most of the content here, but I
+    find it interesting so maybe others will too.
+  </p>
+
+  <h2>Tags</h2>
+  <ul>
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
+  <h2>Posts</h2>
+
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}
