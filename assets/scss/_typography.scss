@@ -1,6 +1,13 @@
 @import 'vars';
 
 
+a,
+a:active,
+a:visited {
+  color: $color-text-link;
+  text-decoration: underline;
+}
+
 body {
   color: $color-text-dark;
   font-family: $font-families;
