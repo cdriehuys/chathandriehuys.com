@@ -1,4 +1,4 @@
-# [chathandriehuys.com](chathandriehuys.com)
+# [chathandriehuys.com](https://chathandriehuys.com)
 
 My personal site.
 
