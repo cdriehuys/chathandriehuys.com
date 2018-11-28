@@ -1,0 +1,39 @@
+/* Colors */
+/* Typography */
+.article { line-height: 1.816; }
+
+.article code { background: #eee; margin: -.25em 0; padding: .25em; }
+
+.article figure { margin: 2rem 0; }
+
+.article figure figcaption { color: #333; font-size: .95rem; text-align: center; }
+
+.article figure figcaption > * { margin: 0; padding: 0; }
+
+.article figure img { box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); display: block; height: auto; margin: 0 auto 1rem auto; max-width: 100%; }
+
+.article pre { background: #eee; max-width: 100%; padding: 1rem; overflow-x: auto; }
+
+.container { margin-left: auto; margin-right: auto; max-width: 50rem; padding-left: 0.5rem; padding-right: 0.5rem; }
+
+/* Colors */
+/* Typography */
+a, a:active, a:visited { color: #29b6f6; text-decoration: underline; }
+
+body { color: #111; font-family: "Open Sans", sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+h1 { color: #333; font-weight: 300; }
+
+h2 { color: #333; font-weight: 300; }
+
+h3 { color: #333; font-weight: 300; }
+
+h4 { color: #333; font-weight: 300; }
+
+h5 { color: #333; font-weight: 300; }
+
+h6 { color: #333; font-weight: 300; }
+
+/* Colors */
+/* Typography */
+.text-muted { color: #555; }
