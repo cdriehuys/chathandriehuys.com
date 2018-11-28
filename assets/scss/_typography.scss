@@ -1,0 +1,19 @@
+@import 'vars';
+
+
+body {
+  font-family: $font-families;
+
+  // Improve font rendering as seen in:
+  // https://medium.com/@MateMarschalko/improving-font-rendering-with-css-3383fc358cbc
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Use 'light' style for headings.
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 300;
+  }
+}

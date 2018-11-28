@@ -1,7 +1,15 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width">
+
     <title>{{ block "title" . }}{{ .Page.Title }} &ndash; {{ .Site.Title }}{{ end }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+    <link href="{{ $style.Permalink }}" rel="stylesheet">
   </head>
   <body>
     {{ block "header" . }}
