@@ -1,9 +1,14 @@
 {{ define "main" }}
   <main class="container">
     <h1>{{ .Title }}</h1>
+    <p class="text-muted">{{ .Date.Format "Jan 2 2006" }}</p>
 
     <article class="article">
       {{ .Content }}
     </article>
+
+    <p>
+      Tags: <span class="text-muted">{{ delimit (.Param "tags") ", " }}</span>
+    </p>
   </main>
 {{ end }}
