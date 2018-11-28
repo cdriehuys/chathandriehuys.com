@@ -1,0 +1,41 @@
+@import 'vars';
+
+
+.article {
+  line-height: 1.816;
+
+  & code {
+    background: $color-bg-grey;
+    margin: -.25em 0;
+    padding: .25em;
+  }
+
+  & figure {
+    margin: 2rem 0;
+
+    & figcaption {
+      color: $color-text-accent;
+      font-size: .95rem;
+      text-align: center;
+
+      & > * {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    & img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  & pre {
+    background: $color-bg-grey;
+    max-width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+}

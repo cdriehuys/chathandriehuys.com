@@ -2,6 +2,7 @@
 
 
 body {
+  color: $color-text-dark;
   font-family: $font-families;
 
   // Improve font rendering as seen in:
@@ -14,6 +15,7 @@ body {
 // Use 'light' style for headings.
 @for $i from 1 through 6 {
   h#{$i} {
+    color: $color-text-accent;
     font-weight: 300;
   }
 }
