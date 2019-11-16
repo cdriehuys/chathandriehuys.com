@@ -4,8 +4,11 @@ title: Chathan Driehuys
 
 ## About
 
-I'm a software developer from North Carolina currently completing my degree
-in computer science at UNC Chapel Hill.
+I'm a software developer from North Carolina currently working at [SAS][sas] as
+a full stack web developer.
+
+My current interests are centered around continuous integration and delivery,
+particularly for web-based SaaS solutions.
 
 ## Contact
 
@@ -17,3 +20,5 @@ in computer science at UNC Chapel Hill.
 
 **LinkedIn**  
 [Chathan Driehuys](https://www.linkedin.com/in/chathan-driehuys/)
+
+[sas]: https://www.sas.com
