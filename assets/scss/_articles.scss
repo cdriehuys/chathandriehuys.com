@@ -5,7 +5,6 @@
   line-height: 1.816;
 
   & code {
-    background: $color-bg-grey;
     margin: -.25em 0;
     padding: .25em;
   }
@@ -40,5 +39,19 @@
     max-width: 100%;
     padding: 1rem;
     overflow-x: auto;
+  }
+
+  & .footnotes {
+    font-size: .95rem;
+    margin-top: 2em;
+
+    & hr {
+      color: $color-bg-grey;
+      opacity: 0.8;
+    }
+
+    ol {
+      list-style-position: outside;
+    }
   }
 }
