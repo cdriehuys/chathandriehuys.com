@@ -42,10 +42,8 @@ associated my custom domain with the Netlify deployment.
 
 Additionally, I could not obtain an SSL certificate for my custom domain.
 
-{{<figure
-    caption="SSL certificate cannot by obtained because DNS verification failed."
-    src="ssl-dns-failed.png"
->}}
+{{< img caption="SSL certificate cannot by obtained because DNS verification failed."
+        src="ssl-dns-failed.png" >}}
 
 ## Troubleshooting
 
@@ -90,4 +88,4 @@ domain itself and set the list of nameservers there.
 Route 53 -> Registered Domains -> <your domain>
 ```
 
-{{<figure src="aws-nameservers.png">}}
+{{< img src="aws-nameservers.png" >}}

@@ -33,7 +33,7 @@ and then, one of my roommates would mention that they had to restart the network
 box or how they couldn't get wifi in the living room. I was starting to wonder
 what was wrong with our setup. Maybe you can spot the issue here.
 
-{{< figure caption="Our original wifi setup." src="original-wifi.png" >}}
+{{< img caption="Our original wifi setup." src="original-wifi.png" >}}
 
 The final straw came on one of the first warm days of 2020. One of my roommates
 and I decided to sit on the porch and get some work done. We pulled up our
@@ -116,8 +116,8 @@ benchmarks, which are published [on GitHub][home-network-github].
 
 I'm also super proud of the professional quality installation job:
 
-{{< figure caption="The FlexHD powered by the included PoE injector. I probably need more cables."
-           src="flexhd.jpg" >}}
+{{< img caption="The FlexHD powered by the included PoE injector. I probably need more cables."
+        src="flexhd.jpg" >}}
  
 # Pi-hole
 
@@ -137,13 +137,13 @@ I was actually surprised at the number of queries that have already been
 blocked. Everybody on the network uses ad-blockers, and yet in the three days
 the Pi-hole has been running, it has blocked over 1,800 queries.
 
-{{< figure caption="Pi-hole statistics after the first three days."
+{{< img caption="Pi-hole statistics after the first three days."
            src="pi-hole-stats.png" >}}
 
 The Raspberry Pi was also added to the network in a highly organized and
 professional manner:
 
-{{< figure caption="The network closet where the fiber line enters the apartment. Includes the network box, a switch, a Philips Hue controller, and now a Pi-hole."
+{{< img caption="The network closet where the fiber line enters the apartment. Includes the network box, a switch, a Philips Hue controller, and now a Pi-hole."
            src="network-closet.jpg" >}}
 
 ## Caveats
@@ -158,7 +158,7 @@ the Pi-hole. So far this primarily affects my Android phone.
 As a web developer who works primarily over the internet, I of course know
 everything there is to know about networking.
 
-{{< figure caption="Proof of my knowledge." src="network-knowledge.jpg" >}}
+{{< img caption="Proof of my knowledge." src="network-knowledge.jpg" >}}
 
 In reality, despite being a web developer who works primarily over the internet,
 I know very little about networking. Apart from configuring DNS for web servers

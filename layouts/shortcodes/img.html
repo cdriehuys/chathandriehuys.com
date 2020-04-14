@@ -1,0 +1,21 @@
+{{ $original := .Page.Resources.GetMatch (.Get "src") }}
+{{ $preview := $original.Resize "800x" }}
+
+<figure>
+  {{- if gt $original.Width 800 -}}
+    <a href="{{ $original.RelPermalink }}">
+  {{- end -}}
+  <img
+      src="{{ if gt $original.Width 800 }}{{ $preview.RelPermalink }}{{ else }}{{ $original.RelPermalink }}{{ end }}"
+      {{- if or (.Get "alt") (.Get "caption") }}
+      alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+      {{- end }}
+      width="{{ if gt $original.Width 800}}{{ $preview.Width }}{{ else }}{{ $original.Width }}{{ end }}"
+  />
+  {{- if gt $original.Width 800 -}}
+    </a>
+  {{- end -}}
+  <figcaption>
+    {{ .Get "caption" | markdownify }}
+  </figcaption>
+</figure>
