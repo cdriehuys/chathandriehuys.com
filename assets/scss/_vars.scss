@@ -2,9 +2,10 @@
  * Colors
  */
 $color-bg-grey: #eee;
+$color-primary: #29b6f6;
 $color-text-accent: #333;
 $color-text-dark: #111;
-$color-text-link: #29b6f6;
+$color-text-link: $color-primary;
 $color-text-muted: #555;
 
 /*

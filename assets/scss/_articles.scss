@@ -4,6 +4,15 @@
 .article {
   line-height: 1.816;
 
+  & blockquote {
+    background: $color-bg-grey;
+    border-left: 3px solid $color-primary;
+    font-size: 1.15em;
+    font-style: italic;
+    margin: 1em 0;
+    padding: 0.25em 1em 0.25em 2em;
+  }
+
   & code {
     background: $color-bg-grey;
     margin: -.25em 0;
