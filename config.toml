@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Chathan Driehuys"
 
 preserveTaxonomyNames = true
+
+[imaging]
+resampleFilter = "Lanczos"
