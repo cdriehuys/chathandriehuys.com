@@ -1,28 +1,42 @@
 {{ define "main" }}
   <main class="container">
-    <h1>Blog</h1>
+    <section>
+      <h1>Blog</h1>
 
-    <p>
-      Sometimes I write about random things that I found interesting or had
-      trouble with. I am by no means an expert on most of the content here, but I
-      find it interesting so maybe others will too.
-    </p>
+      <p>
+        Sometimes I write about random things that I found interesting or had
+        trouble with. I am by no means an expert on most of the content here, but I
+        find it interesting so maybe others will too.
+      </p>
+    </section>
 
-    <h2>Tags</h2>
-    <ul>
-      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-          <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+    {{ with .Site.Taxonomies.tags.ByCount }}
+      <section>
+        <h2>Popular Tags</h2>
+        <ul class="tag-list">
+          {{- $count := len . -}}
+          {{ range first 5 . }}
+            {{ partial "tag.html" . }}
+          {{ end }}
+          {{- if gt $count 5 }}
+          <li class="tag-list__more">
+            <a href="/tags/">
+              ...and {{ sub $count 5 }} more
+            </a>
+          </li>
+          {{- end -}}
+        </ul>
+      </section>
+    {{ end }}
+
+    <section>
+      <h2>Posts</h2>
+
+      <ul>
+        {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
-      {{ end }}
-    </ul>
-
-    <h2>Posts</h2>
-
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+      </ul>
+    </section>
   </main>
 {{ end }}

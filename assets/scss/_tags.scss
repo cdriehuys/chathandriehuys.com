@@ -1,0 +1,17 @@
+.tag-list {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-list__more {
+  display: block;
+}
+
+.tag-list__tag {
+  background: #eee;
+  display: block;
+  padding: .25em;
+  margin-bottom: .5em;
+  margin-right: .5em;
+}
