@@ -23,6 +23,7 @@ body {
 @for $i from 1 through 6 {
   h#{$i} {
     color: $color-text-accent;
-    font-family: "Roboto Mono", sans-serif;
+    font-family: $font-families-headings;
+    margin-bottom: 0.5em;
   }
 }
