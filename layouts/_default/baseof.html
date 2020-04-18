@@ -5,10 +5,13 @@
 
     <title>{{ block "title" . }}{{ .Page.Title }} &ndash; {{ .Site.Title }}{{ end }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap"
+        rel="stylesheet"
+    >
 
-    {{ $options := (dict "targetPath" "style.css") }}
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | minify | fingerprint }}
+    {{ $options := (dict "targetPath" "style.css") -}}
+    {{- $style := resources.Get "scss/main.scss" | resources.ToCSS $options | minify | fingerprint -}}
     <link href="{{ $style.Permalink }}" rel="stylesheet">
   </head>
   <body>
