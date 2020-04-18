@@ -7,8 +7,10 @@
       {{ .Content }}
     </article>
 
-    <p>
-      Tags: <span class="text-muted">{{ delimit (.Param "tags") ", " }}</span>
-    </p>
+    {{ with .Param "tags" }}
+      <p>
+        Tags: <span class="text-muted">{{ delimit (.) ", " }}</span>
+      </p>
+    {{ end }}
   </main>
 {{ end }}
