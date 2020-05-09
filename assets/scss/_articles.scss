@@ -45,6 +45,11 @@
     }
   }
 
+  & li {
+    list-style-position: inside;
+    margin-left: 1em;
+  }
+
   & pre {
     background: $color-bg-grey;
     max-width: 100%;

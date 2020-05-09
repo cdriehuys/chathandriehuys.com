@@ -1,18 +1,30 @@
 {{ $original := .Page.Resources.GetMatch (.Get "src") }}
-{{ $preview := $original.Resize "800x" }}
+{{ $maxWidth := 800 }}
+{{ $maxHeight := 500 }}
+{{ $needsResize := false }}
+{{ $preview := $original }}
+{{ if gt $original.Width $maxWidth }}
+  {{ $needsResize = true }}
+  {{ $preview = $original.Resize "800x" }}
+{{ end }}
+
+{{ if gt $preview.Height $maxHeight }}
+  {{ $needsResize = true }}
+  {{ $preview = $original.Resize "x500" }}
+{{ end }}
 
 <figure>
-  {{- if gt $original.Width 800 -}}
+  {{- if $needsResize -}}
     <a href="{{ $original.RelPermalink }}">
   {{- end -}}
   <img
-      src="{{ if gt $original.Width 800 }}{{ $preview.RelPermalink }}{{ else }}{{ $original.RelPermalink }}{{ end }}"
+      src="{{ $preview.RelPermalink }}"
       {{- if or (.Get "alt") (.Get "caption") }}
       alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
       {{- end }}
-      width="{{ if gt $original.Width 800}}{{ $preview.Width }}{{ else }}{{ $original.Width }}{{ end }}"
+      width="{{ $preview.Width }}"
   />
-  {{- if gt $original.Width 800 -}}
+  {{- if $needsResize -}}
     </a>
   {{- end -}}
   <figcaption>

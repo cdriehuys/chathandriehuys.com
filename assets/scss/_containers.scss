@@ -10,6 +10,18 @@ $container-width: 50rem;
   padding-right: $container-padding / 2;
 }
 
-section {
+ol,
+p,
+pre,
+section,
+ul {
   margin-bottom: 1em;
+}
+
+// Eliminate margins from nested lists.
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
 }
