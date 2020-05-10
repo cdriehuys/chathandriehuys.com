@@ -1,0 +1,21 @@
+@import 'vars';
+
+.post {
+  margin-bottom: 2em;
+}
+
+.post__date {
+  color: $color-text-muted;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.post__description {
+  color: $color-text-accent;
+  margin-bottom: 0;
+}
+
+.post__title {
+  margin-bottom: 0.15em;
+}

@@ -1,0 +1,15 @@
+{{ with . }}
+  <div class="post-list">
+    {{ range . }}
+      <div class="post">
+        <h3 class="post__title">
+          <a href="{{.Page.Permalink }}">{{ .Page.Title }}</a>
+        </h3>
+        <p class="post__date">{{ .Page.Date.Format "Jan 2, 2006" }}</p>
+        {{ with .Description }}
+          <p class="post__description">{{ . | markdownify }}</p>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
