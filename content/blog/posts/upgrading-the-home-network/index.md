@@ -1,6 +1,8 @@
 ---
 title: "Upgrading the Home Network"
 date: 2020-05-09T12:12:43-04:00
+description: >
+  My experience overhauling my home network through overkill and excess.
 tags:
  - Homelab
  - Networking

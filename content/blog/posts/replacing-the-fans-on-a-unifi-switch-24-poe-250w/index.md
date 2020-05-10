@@ -1,6 +1,8 @@
 ---
-title: "Replacing the Fans on a Unifi Switch 24 Poe 250w"
+title: "Replacing the Fans on a UniFi Switch 24 Poe 250w"
 date: 2020-05-10T10:19:36-04:00
+description: >
+  Replacing the fans on a UniFi switch to reduce noise.
 tags:
   - Hardware
   - Homelab
