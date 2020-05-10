@@ -6,3 +6,6 @@ preserveTaxonomyNames = true
 
 [imaging]
 resampleFilter = "Lanczos"
+
+[permalinks]
+  blog = "/blog/posts/:year/:month/:title"
