@@ -1,3 +1,12 @@
+.tag-index {
+  list-style-position: inside;
+}
+
+.tag-index__count {
+  font-size: .9em;
+  opacity: .75;
+}
+
 .tag-list {
   align-items: baseline;
   display: flex;

@@ -1,11 +1,15 @@
 {{ define "main" }}
-  <main>
-    <h1>Posts Tagged &ldquo;{{ .Name }}&rdquo;</h1>
+  <section class="container">
+    <h1>Tags</h1>
 
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
+    <ul class="tag-index">
+    {{ range .Site.Taxonomies.tags.Alphabetical }}
+      <li class="tag-index__term">
+        <a href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title }} <span class="tag-index__count">({{ .Count }})</span>
+        </a>
+      </li>
+    {{ end }}
     </ul>
-  </main>
+  </section>
 {{ end }}
