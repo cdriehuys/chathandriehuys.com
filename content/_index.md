@@ -12,13 +12,13 @@ particularly for web-based SaaS solutions.
 
 ## Contact
 
-**Email**
+**Email**  
 [chathan@driehuys.com](mailto:chathan@driehuys.com)
 
-**Github**
+**Github**  
 [cdriehuys](https://github.com/cdriehuys)
 
-**LinkedIn**
+**LinkedIn**  
 [Chathan Driehuys](https://www.linkedin.com/in/chathan-driehuys/)
 
 [salesforce]: https://www.salesforce.com/
