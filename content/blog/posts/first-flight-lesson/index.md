@@ -5,6 +5,7 @@ description: >
   My experiences during my first flight lesson.
 tags:
   - Flying
+draft: true
 ---
 
 My notes from my first flight lesson with [FlightGest][flightgest] at KRDU.
@@ -15,14 +16,14 @@ My notes from my first flight lesson with [FlightGest][flightgest] at KRDU.
   preflighted (preflit?) the plane three times previously.
 * Don't forgot to remove all the tie-downs and chocks during the walk around.
   * This is where the second overview walk around is useful.
-  
+
 ## Engine Start
 
 * Pretty straightforward procedure.
 * I still need to get a feel for the engine.
   * When it "coughs" before you supply fuel.
   * How to lean the engine based on when it's running rough.
-  
+
 ## Taxiing
 
 * I was prepared for the concept of steering with my feet, but obviously it
@@ -35,7 +36,7 @@ My notes from my first flight lesson with [FlightGest][flightgest] at KRDU.
     output.
   * It's much easier to provide conflicting inputs in the plane, such as braking
     while still applying too much power.
-    
+
 ## Run Up
 
 * I was still processing the taxiing I had done to the run up area, so the run
@@ -111,7 +112,7 @@ My notes from my first flight lesson with [FlightGest][flightgest] at KRDU.
   like I was landing an airplane. I certainly can't recall how much my
   instructor assisted the landing process, but we got on the ground without too
   much of a jolt.
-  
+
 ## Taxi Back and Shutdown
 
 * I was much better at taxiing after we landed than I was prior to taking off.

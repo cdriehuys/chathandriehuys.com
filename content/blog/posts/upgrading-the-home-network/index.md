@@ -7,6 +7,7 @@ tags:
  - Homelab
  - Networking
  - Ubiquiti
+draft: true
 ---
 
 In my [last post]({{< ref "/blog/posts/my-intro-to-home-networking" >}}), I
@@ -86,8 +87,8 @@ I immediately turned around and placed another order:
 
 {{< img caption="Starting to look like something other than just cables."
         src="with-shelf.jpg" >}}
-        
-One patch panel and about an hour of cable management later: 
+
+One patch panel and about an hour of cable management later:
 
 {{< img caption="Look at all the blinky lights."
         src="clean-front.jpg" >}}
@@ -102,7 +103,7 @@ clean up the panel and gave me my biggest aesthetic win yet.
 
 This is one of the places I goofed though. The PoE injector and patch cable
 could be removed if I used a USB power adapter for the fiber jack. Same number
-of power cables and one less patch cable. Oh well, it 
+of power cables and one less patch cable. Oh well, it
 still looks good.
 
 

@@ -8,6 +8,7 @@ tags:
   - Homelab
   - Noctua
   - Ubiquiti
+draft: true
 ---
 
 I have two pieces of hardware with fans in my home networking rack. The first is

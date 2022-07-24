@@ -8,6 +8,7 @@ tags:
   - Homelab
   - Networking
   - Ubiquiti
+draft: true
 ---
 
 When I moved into a new apartment after graduating from college, my two
@@ -103,7 +104,7 @@ My second (and more successful) attempt at setting up the FlexHD looked like:
 2. Disable the network broadcast by the Google Fiber network box.
 3. Rename the network broadcast from the FlexHD to have the same SSID as the
    original network.
-   
+
 ## Results
 
 It turns out that placing the access point closer to where the wifi is actually
@@ -123,7 +124,7 @@ I'm also super proud of the professional quality installation job:
 Unfortunately for my wallet, I am planning to expand our network with more UniFi
 products. This will be a good opportunity to compare how the FlexHD is managed
 as a standalone device versus when it's managed by a controller.
- 
+
 # Pi-hole
 
 With the network closet already cracked open, I finally got around to setting up
