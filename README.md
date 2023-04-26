@@ -8,7 +8,7 @@ The easiest path is to use VS Code and open the project in a devcontainer. To
 start the development server:
 
 ```bash
-hugo server
+npm run dev
 ```
 
 ## License

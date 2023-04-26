@@ -1,5 +1,10 @@
 {
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false
-    },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "[html][json][jsonc][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
 }

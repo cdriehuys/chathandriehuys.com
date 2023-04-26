@@ -1,11 +1,2 @@
-baseURL = ""
-languageCode = "en-us"
-title = "Chathan Driehuys"
-
-preserveTaxonomyNames = true
-
-[imaging]
-resampleFilter = "Lanczos"
-
-[permalinks]
-  blog = "/blog/posts/:year/:month/:title"
+languageCode = 'en-us'
+title = 'Chathan Driehuys - Software Developer'
