@@ -1,8 +1,16 @@
-{{ define "title" }}{{ .Title }}{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chathan Driehuys</title>
 
-{{ define "main" }}
-  <main class="container">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </main>
-{{ end }}
+    {{ $style := resources.Get "dist/style.css" }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  </head>
+
+  <body class="h-screen bg-slate-800 p-2 text-slate-50">
+    <h1 class="mb-4 text-3xl font-bold">Chathan Driehuys</h1>
+    <h2 class="text-xl">Software Developer</h2>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "chathandriehuys.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website.",
+  "scripts": {
+    "build": "npm run build:css && npm run build:site",
+    "build:css": "tailwindcss -i assets/global.css -o assets/dist/style.css",
+    "build:site": "hugo",
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:css": "npm run build:css -- --watch",
+    "dev:server": "hugo server",
+    "prepare": "husky install",
+    "style:check": "prettier --check .",
+    "style:fix": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdriehuys/chathandriehuys.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cdriehuys/chathandriehuys.com/issues"
+  },
+  "homepage": "https://github.com/cdriehuys/chathandriehuys.com#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-go-template": "^0.0.13",
+    "prettier-plugin-tailwindcss": "^0.2.7"
+  }
+}
