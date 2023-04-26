@@ -14,9 +14,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "patbenatar.advanced-new-file",
+        "bradlc.vscode-tailwindcss",
+        "bungcip.better-toml",
         "esbenp.prettier-vscode",
-        "bungcip.better-toml"
+        "patbenatar.advanced-new-file"
       ]
     }
   },
