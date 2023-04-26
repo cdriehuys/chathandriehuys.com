@@ -11,4 +11,5 @@ module.exports = {
     require("prettier-plugin-go-template"),
     require("prettier-plugin-tailwindcss"),
   ],
+  proseWrap: "always",
 };
