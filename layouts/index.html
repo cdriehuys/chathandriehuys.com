@@ -9,42 +9,90 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
   </head>
 
-  <body class="h-screen bg-slate-800 p-2 text-slate-50">
-    <main class="mx-auto max-w-4xl">
-      <section class="mb-16">
-        <h1 class="mb-4 text-3xl font-bold md:text-4xl">Chathan Driehuys</h1>
-        <h2 class="text-xl md:text-2xl">Software Developer</h2>
+  <body class="h-screen bg-slate-800 p-2 text-slate-50 md:text-lg">
+    <main class="mx-auto max-w-2xl">
+      <section
+        class="mb-16 mt-8 text-center md:flex md:items-center md:justify-between md:text-left"
+      >
+        <div>
+          <h1
+            class="mb-2 text-3xl font-bold underline decoration-blue-500 md:text-4xl"
+          >
+            Chathan Driehuys
+          </h1>
+          <h2 class="mb-8 text-xl text-slate-300 md:text-2xl">
+            Software Developer
+          </h2>
+        </div>
+
+        {{ $headshot := resources.Get "images/headshot-square-512-compressed.jpg" }}
+        {{ $headshot = $headshot.Resize "196x" }}
+        <img
+          alt="Chathan Driehuys headshot"
+          class="mx-auto rounded-full border-4 border-blue-500 md:mx-0"
+          height="{{ $headshot.Height }}"
+          src="{{ $headshot.Permalink }}"
+          width="{{ $headshot.Width }}"
+        />
       </section>
 
       <section class="mb-16">
-        <h2 class="mb-8 text-center text-2xl md:text-3xl">Experience</h2>
+        <h2
+          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
+        >
+          About Me
+        </h2>
+        <p class="mb-2">
+          Hi, I&apos;m <span class="font-bold">Chathan Driehuys</span>, a
+          software developer from North Carolina. I build performant software
+          with focuses on correctness through automation and efficient developer
+          experiences.
+        </p>
+        <p>
+          Outside of work, I enjoy rock climbing, disc golfing, video games, and
+          working on my pilot&apos;s license.
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <h2
+          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
+        >
+          Experience
+        </h2>
         <ul class="list-inside list-disc">
           <li class="mb-2">
-            Salesforce - Full stack web developer on the notifications team. We
-            provided notifications APIs to both internal and external consumers
-            for Slack, desktop, and mobile targets.
+            <span class="font-bold">Salesforce</span> &ndash; Full stack web
+            developer on the notifications team. We provided notifications APIs
+            to both internal and external consumers for Slack, desktop, and
+            mobile targets.
           </li>
           <li class="mb-2">
-            SAS - Full stack web developer for SAS Intelligent Decisioning. We
-            built a web app allowing users to build data pipelines represented
-            as a flowchart that could then be published as executable code to
-            various targets.
+            <span class="font-bold">SAS</span> &ndash; Full stack web developer
+            for SAS Intelligent Decisioning. We built a web app allowing users
+            to build data pipelines represented as a flowchart that could then
+            be published as executable code to various targets.
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2 class="mb-8 text-center text-2xl md:text-3xl">Contact Me</h2>
+      <section class="mb-16">
+        <h2
+          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
+        >
+          Contact Me
+        </h2>
         <div
           class="flex flex-col items-center text-lg md:flex-row md:justify-between"
         >
           <div class="md:flex-1">
             <a
-              class="mb-8 flex flex-col items-center underline"
+              class="mb-8 flex flex-col items-center fill-slate-50 stroke-slate-50 underline transition-colors hover:fill-blue-500 hover:stroke-blue-500 hover:text-slate-200"
               href="mailto:chathan@driehuys.com"
               target="_blank"
-              ><svg
-                class="h-16 w-16 fill-slate-50 stroke-slate-50"
+            >
+              <svg
+                class="h-16 w-16"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
               >
@@ -54,18 +102,19 @@
                   d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
                 />
               </svg>
+
               chathan@driehuys.com</a
             >
           </div>
           <div class="md:flex-1">
             <a
-              class="mb-8 flex flex-col items-center underline"
+              class="mb-8 flex flex-col items-center fill-slate-50 stroke-slate-50 underline transition-colors hover:fill-blue-500 hover:stroke-blue-500 hover:text-slate-200"
               href="https://github.com/cdriehuys"
               target="_blank"
               rel="noreferrer"
             >
               <svg
-                class="h-16 w-16 fill-slate-50 stroke-slate-50"
+                class="h-16 w-16"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
               >
@@ -79,13 +128,13 @@
           </div>
           <div class="md:flex-1">
             <a
-              class="mb-8 flex flex-col items-center underline"
+              class="mb-8 flex flex-col items-center fill-slate-50 stroke-slate-50 underline transition-colors hover:fill-blue-500 hover:stroke-blue-500 hover:text-slate-200"
               href="https://www.linkedin.com/in/chathan-driehuys/"
               target="_blank"
               rel="noreferrer"
             >
               <svg
-                class="h-16 w-16 fill-slate-50 stroke-slate-50"
+                class="h-16 w-16"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
@@ -98,6 +147,10 @@
             >
           </div>
         </div>
+        <p class="text-center text-sm italic text-slate-300">
+          I am not currently looking for new work. Please do not contact me
+          regarding such opportunities.
+        </p>
       </section>
     </main>
   </body>
