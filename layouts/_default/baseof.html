@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    {{ $style := resources.Get "dist/style.css" | fingerprint }}
+    <link
+      rel="stylesheet"
+      href="{{ $style.Permalink }}"
+      integrity="{{ $style.Data.Integrity }}"
+    />
+  </head>
+
+  <body class="h-screen bg-slate-900 pb-8 text-slate-100">
+    <header>
+      {{ block "header" . }}{{ end }}
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+      {{ block "footer" . }}
+        <nav class="mx-auto mb-4 max-w-3xl border-t border-slate-50/20 pt-2">
+          <ul class="flex justify-center space-x-8">
+            <li>
+              <a
+                class="underline transition-colors hover:decoration-blue-500"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="underline transition-colors hover:decoration-blue-500"
+                href="/posts"
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                class="underline transition-colors hover:decoration-blue-500"
+                href="/knowledge"
+              >
+                Knowledge Base
+              </a>
+            </li>
+          </ul>
+        </nav>
+      {{ end }}
+    </footer>
+  </body>
+</html>

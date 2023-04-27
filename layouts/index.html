@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chathan Driehuys</title>
-
-    {{ $style := resources.Get "dist/style.css" }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
-  </head>
-
-  <body class="h-screen bg-slate-800 p-2 text-slate-50 md:text-lg">
-    <main class="mx-auto max-w-2xl">
+{{ define "main" }}
+  <div class="p-2 text-slate-100 md:text-lg">
+    <div class="mx-auto max-w-2xl">
       <section
         class="mb-16 mt-8 text-center md:flex md:items-center md:justify-between md:text-left"
       >
@@ -43,10 +33,9 @@
           About Me
         </h2>
         <p class="mb-2">
-          Hi, I&apos;m <span class="font-bold">Chathan Driehuys</span>, a
-          software developer from North Carolina. I build performant software
-          with focuses on correctness through automation and efficient developer
-          experiences.
+          Hi, I&apos;m <b>Chathan Driehuys</b>, a software developer from North
+          Carolina. I build performant software with focuses on correctness
+          through automation and efficient developer experiences.
         </p>
         <p>
           Outside of work, I enjoy rock climbing, disc golfing, video games, and
@@ -103,6 +92,6 @@
           regarding such opportunities.
         </p>
       </section>
-    </main>
-  </body>
-</html>
+    </div>
+  </div>
+{{ end }}
