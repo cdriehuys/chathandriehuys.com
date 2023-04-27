@@ -1,0 +1,15 @@
+{{ define "title" }}Knowledge Base{{ end }}
+
+{{ define "main" }}
+  <div class="mx-auto max-w-3xl p-2">
+    <section class="my-8">
+      <h1 class="mb-4 text-3xl md:text-4xl">Knowledge Base</h1>
+      <p class="text-lg">
+        A collection of information that I might want to refer to at a later
+        date.
+      </p>
+    </section>
+
+    {{ partial "paginated-post-list.html" .Paginator }}
+  </div>
+{{ end }}
