@@ -6,5 +6,7 @@ public/
 
 # Generated resources
 assets/dist
-resources/*
-!resources/.gitkeep
+resources/
+
+# Hugo lockfile
+.hugo_build.lock
