@@ -8,7 +8,7 @@
     {{ $style := resources.Get "dist/style.css" | fingerprint }}
     <link
       rel="stylesheet"
-      href="{{ $style.Permalink }}"
+      href="{{ $style.RelPermalink }}"
       integrity="{{ $style.Data.Integrity }}"
     />
   </head>

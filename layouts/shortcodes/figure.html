@@ -2,6 +2,6 @@
 {{ $caption := .Get "caption" }}
 {{ $alt := default $caption (.Get "alt") }}
 <figure>
-  <img alt="{{ $alt }}" src="{{ $img.Permalink }}" />
+  <img alt="{{ $alt }}" src="{{ $img.RelPermalink }}" />
   <figcaption>{{ $caption }}</figcaption>
 </figure>
