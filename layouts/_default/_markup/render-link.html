@@ -1,4 +1,4 @@
-{{ $isExternal := and (strings.HasPrefix .Destination "http") (not (strings.Contains .Destination site.BaseURL)) }}
+{{ $isExternal := strings.HasPrefix .Destination "http" }}
 <a
   href="{{ .Destination | safeURL }}"
   {{ with .Title -}}
