@@ -1,7 +1,8 @@
 ---
 title: "Hugo, Tailwind, and Netlify"
 date: 2023-04-27T17:20:21Z
-draft: true
+tags:
+  - Web Development
 ---
 
 I recently hopped on the [Tailwind CSS][tailwind] bandwagon, and I've been
