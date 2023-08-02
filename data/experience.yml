@@ -1,5 +1,10 @@
 ---
 jobs:
+  - name: Capital One
+    description:
+      Software developer creating a platform for running ETL jobs using Python
+      and Spark.
+
   - name: Salesforce
     description:
       Full stack web developer on the notifications team. We provided
