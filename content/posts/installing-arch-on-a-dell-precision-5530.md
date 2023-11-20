@@ -100,7 +100,22 @@ systemctl enable gdm
 After a restart, you should be able to log in to the desktop environment as a
 normal user, and have `sudo` privileges to continue configuring the system.
 
+## Thunderbolt
+
+In order to get USB ports working on my Thunderbolt dock, I had to edit the BIOS
+setting for Thunderbolt enumeration to "Native", and I had to add the following
+kernel parameters as described in [this post][caldigit-ts4-arch]:
+
+```
+pci=assign-busses,hpbussize=0x33,realloc,hpmemsize=512M nvme.noacpi=1
+```
+
+Without these changes, displays were working, but the USB ports on the dock were
+not functional.
+
 [arch-install-guide]: https://wiki.archlinux.org/title/Installation_guide
 [arch-network-managers]:
   https://wiki.archlinux.org/title/Network_configuration#Network_managers
 [arch-precision]: https://wiki.archlinux.org/title/Laptop/Dell#Precision
+[caldigit-ts4-arch]:
+  https://community.frame.work/t/arch-caldigit-ts4-dock-xfce4-trials-tribulations-and-fixes/29117
