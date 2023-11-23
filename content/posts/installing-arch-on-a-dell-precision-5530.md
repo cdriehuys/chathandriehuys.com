@@ -1,6 +1,7 @@
 ---
 title: "Installing Arch on a Dell Precision 5530"
 date: 2023-08-02T14:25:55Z
+modified: 2023-11-22
 tags:
   - Arch Linux
 ---
