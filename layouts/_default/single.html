@@ -1,5 +1,22 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 
+{{ define "header" }}
+  <nav
+    class="mb-8 border-b border-b-slate-700 p-2 text-sm font-semibold leading-6 text-slate-200 lg:text-lg"
+  >
+    <ul
+      class="mx-auto flex max-w-3xl space-x-8 px-4 transition-colors hover:decoration-blue-500"
+    >
+      <li class="flex-grow">
+        <a class="hover:text-blue-500 hover:underline" href="/">Home</a>
+      </li>
+      <li>
+        <a class="hover:text-blue-500 hover:underline" href="/posts">Blog</a>
+      </li>
+    </ul>
+  </nav>
+{{ end }}
+
 {{ define "main" }}
   <div class="mb-8">
     <article class="prose prose-invert mx-auto p-2 lg:prose-lg">

@@ -15,7 +15,30 @@
 
   <body class="h-screen bg-slate-900 pb-8 text-slate-100">
     <header>
-      {{ block "header" . }}{{ end }}
+      {{ block "header" . }}
+        <nav
+          class="mb-8 border-b border-b-slate-700 p-2 text-sm font-semibold leading-6 text-slate-200 lg:text-lg"
+        >
+          <ul class="mx-auto flex max-w-3xl space-x-8 px-4">
+            <li class="flex-grow">
+              <a
+                class="transition-colors hover:text-blue-500 hover:underline hover:decoration-blue-500"
+                href="/"
+                >Home</a
+              >
+            </li>
+            {{ range $.Site.Data.navigation.navbar.links }}
+              <li>
+                <a
+                  class="transition-colors hover:text-blue-500 hover:underline hover:decoration-blue-500"
+                  href="{{ .url }}"
+                  >{{ .name }}</a
+                >
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      {{ end }}
     </header>
     <main>
       {{ block "main" . }}{{ end }}
@@ -28,17 +51,20 @@
               <a
                 class="underline transition-colors hover:decoration-blue-500"
                 href="/"
-                >Home</a
               >
-            </li>
-            <li>
-              <a
-                class="underline transition-colors hover:decoration-blue-500"
-                href="/posts"
-              >
-                Blog
+                Home
               </a>
             </li>
+            {{ range $.Site.Data.navigation.navbar.links }}
+              <li>
+                <a
+                  class="underline transition-colors hover:decoration-blue-500"
+                  href="{{ .url }}"
+                >
+                  {{ .name }}
+                </a>
+              </li>
+            {{ end }}
           </ul>
         </nav>
       {{ end }}
