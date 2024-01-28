@@ -1,6 +1,6 @@
 <ul>
   {{ range .Pages }}
-    <li class="mb-4">
+    <li class="mb-6">
       <h3 class="mb-2 text-lg">
         <a class="text-blue-500 underline" href="{{ .RelPermalink }}"
           >{{ .Title }}</a
@@ -8,6 +8,22 @@
         &mdash;
         {{ .Date | time.Format ":date_long" }}
       </h3>
+
+      {{ with .GetTerms "tags" }}
+        <ul class="mb-2 flex flex-wrap gap-x-2">
+          {{ range . }}
+            <li>
+              <a
+                class="block bg-slate-300 px-1 py-0.5 text-slate-900"
+                href="{{ .RelPermalink }}"
+                >{{ .LinkTitle }}</a
+              >
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+
       <p class="text-slate-400">{{ .Summary | plainify | htmlUnescape }}</p>
     </li>
   {{ end }}
