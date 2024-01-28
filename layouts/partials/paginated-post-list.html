@@ -9,19 +9,7 @@
         {{ .Date | time.Format ":date_long" }}
       </h3>
 
-      {{ with .GetTerms "tags" }}
-        <ul class="mb-2 flex flex-wrap gap-x-2">
-          {{ range . }}
-            <li>
-              <a
-                class="block bg-slate-300 px-1 py-0.5 text-slate-900"
-                href="{{ .RelPermalink }}"
-                >{{ .LinkTitle }}</a
-              >
-            </li>
-          {{ end }}
-        </ul>
-      {{ end }}
+      {{ partial "tag-list.html" (.GetTerms "tags") }}
 
 
       <p class="text-slate-400">{{ .Summary | plainify | htmlUnescape }}</p>
