@@ -2,8 +2,12 @@
 
 {{ define "main" }}
   <div class="mx-auto max-w-3xl p-2">
-    <section class="my-8">
+    <section class="mb-8">
       <h1 class="mb-4 text-3xl md:text-4xl">Blog</h1>
+      <p class="text-lg leading-relaxed">
+        I write mostly to help myself understand a subject better, but perhaps
+        others can find my ramblings useful too.
+      </p>
     </section>
 
     {{ partial "paginated-post-list.html" .Paginator }}
