@@ -1,0 +1,13 @@
+{{ with . }}
+  <ul class="mb-2 flex flex-wrap gap-x-2">
+    {{ range . }}
+      <li>
+        <a
+          class="block bg-slate-300 px-1 py-0.5 text-slate-900"
+          href="{{ .RelPermalink }}"
+          >{{ .LinkTitle }}</a
+        >
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

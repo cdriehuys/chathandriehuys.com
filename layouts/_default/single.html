@@ -18,13 +18,13 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="mb-8">
-    <article class="prose prose-invert mx-auto p-2 lg:prose-lg">
-      <h1>{{ .Title }}</h1>
+  <div class="mx-auto mb-8 max-w-prose px-4 lg:max-w-2xl">
+    <section class="mb-8">
+      <h1 class="mb-4 text-4xl">{{ .Title }}</h1>
       {{ $publishDate := .PublishDate | time.Format ":date_long" }}
       {{ $updateDate := .Lastmod | time.Format ":date_long" }}
       {{ $showUpdate := and (gt .Lastmod .PublishDate) (ne $publishDate $updateDate) }}
-      <h2 class="mb-6 text-lg font-normal text-slate-400 md:text-[1.25rem]">
+      <h2 class="mb-2 text-lg font-normal text-slate-400 md:text-[1.25rem]">
         Published
         {{ $publishDate }}
         {{ if $showUpdate }}
@@ -32,6 +32,9 @@
           {{ $updateDate }}
         {{ end }}
       </h2>
+      {{ partial "tag-list.html" (.GetTerms "tags") }}
+    </section>
+    <article class="prose prose-invert mx-auto lg:prose-lg">
       {{ .Content }}
     </article>
   </div>
