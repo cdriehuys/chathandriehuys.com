@@ -1,0 +1,20 @@
+{{ with . }}
+  <ul>
+    {{ range . }}
+      <li class="mb-6">
+        <h3 class="mb-2 text-lg">
+          <a class="text-blue-500 underline" href="{{ .RelPermalink }}"
+            >{{ .Title }}</a
+          >
+          &mdash;
+          {{ .Date | time.Format ":date_long" }}
+        </h3>
+
+        {{ partial "tag-list.html" (.GetTerms "tags") }}
+
+
+        <p class="text-slate-400">{{ .Summary | plainify | htmlUnescape }}</p>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
