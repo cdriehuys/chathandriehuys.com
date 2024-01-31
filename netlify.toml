@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "HUGO_BASE_URL=$DEPLOY_PRIME_URL npm run build"
+  command = "npm run build -- -- --baseURL $DEPLOY_PRIME_URL"
 
 [build.environment]
   HUGO_VERSION = "0.111.3"
