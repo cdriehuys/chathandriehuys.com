@@ -139,7 +139,7 @@ configuration we need to add to our repository in `netlify.toml`:
 ```toml
 [build]
   publish = "public"
-  command = "HUGO_BASE_URL=$DEPLOY_PRIME_URL npm run build"
+  command = "npm run build"
 
 [build.environment]
   HUGO_VERSION = "0.111.3"
@@ -150,10 +150,7 @@ the `public/` directory by default.
 
 We set `command` to our nicely packaged `npm run build` script. The presence of
 a `package.json` file causes Netlify to install the packages by default, so we
-don't need to worry about that. We also set the `HUGO_BASE_URL` environment
-variable to `$DEPLOY_PRIME_URL` which contains the base URL of the Netlify site
-being deployed. This allows absolute permalinks to work in both the production
-build, and any branch deploys or deploy previews.
+don't need to worry about that
 
 Finally, we pin a `HUGO_VERSION` since the `hugo` provided in the base image is
 most likely older than what we want. Netlify automatically [installs the pinned
