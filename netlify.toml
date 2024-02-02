@@ -4,6 +4,7 @@
 
   [build.environment]
     HUGO_VERSION = "0.111.3"
+    HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
   command = "npm run build -- -- --baseURL $DEPLOY_PRIME_URL"
