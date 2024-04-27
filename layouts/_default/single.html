@@ -5,7 +5,7 @@
     class="mb-8 border-b border-b-slate-700 p-2 text-sm font-semibold leading-6 text-slate-200 lg:text-lg"
   >
     <ul
-      class="mx-auto flex max-w-3xl space-x-8 px-4 transition-colors hover:decoration-blue-500"
+      class="mx-auto flex max-w-4xl space-x-8 px-4 transition-colors hover:decoration-blue-500"
     >
       <li class="flex-grow">
         <a class="hover:text-blue-500 hover:underline" href="/">Home</a>
@@ -18,7 +18,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="mx-auto mb-8 max-w-prose px-4 lg:max-w-2xl">
+  <div class="mx-auto mb-8 max-w-prose px-4 lg:max-w-4xl">
     <section class="mb-8">
       <h1 class="mb-4 text-4xl">{{ .Title }}</h1>
       {{ $publishDate := .PublishDate | time.Format ":date_long" }}
@@ -34,7 +34,7 @@
       </h2>
       {{ partial "tag-list.html" (.GetTerms "tags") }}
     </section>
-    <article class="prose prose-invert mx-auto lg:prose-lg">
+    <article class="prose prose-invert lg:prose-lg">
       {{ .Content }}
     </article>
   </div>
