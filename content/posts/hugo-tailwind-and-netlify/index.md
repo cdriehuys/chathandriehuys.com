@@ -2,6 +2,8 @@
 title: "Hugo, Tailwind, and Netlify"
 date: 2023-04-27T17:20:21Z
 tags:
+  - Hugo
+  - Netlify
   - Web Development
 ---
 
