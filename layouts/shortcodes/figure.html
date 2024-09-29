@@ -1,7 +1,11 @@
 {{ $img := $.Page.Resources.GetMatch (.Get "src") }}
 {{ $caption := .Get "caption" }}
 {{ $alt := default $caption (.Get "alt") }}
-<figure>
-  <img alt="{{ $alt }}" src="{{ $img.RelPermalink }}" />
+<figure class="center text-center">
+  <img
+    alt="{{ $alt }}"
+    class="mx-auto shadow-lg"
+    src="{{ $img.RelPermalink }}"
+  />
   <figcaption>{{ $caption }}</figcaption>
 </figure>
