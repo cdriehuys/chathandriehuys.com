@@ -15,9 +15,9 @@
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss",
-        "bungcip.better-toml",
         "esbenp.prettier-vscode",
-        "patbenatar.advanced-new-file"
+        "patbenatar.advanced-new-file",
+        "tamasfe.even-better-toml"
       ]
     }
   },
