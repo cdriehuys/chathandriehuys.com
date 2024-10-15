@@ -1,4 +1,6 @@
 ---
+actively_looking_for_work: false
+not_looking_for_work: false
 methods:
   - url: mailto:chathan@driehuys.com
     text: chathan@driehuys.com
