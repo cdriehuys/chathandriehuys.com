@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
+  "proseWrap": "always"
+}

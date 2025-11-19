@@ -1,10 +1,10 @@
 [build]
-  publish = "public"
-  command = "npm run build"
+publish = "public"
+command = "hugo"
 
-  [build.environment]
-    HUGO_VERSION = "0.111.3"
-    HUGO_ENABLEGITINFO = "true"
+[build.environment]
+HUGO_VERSION = "0.152.2"
+HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-  command = "npm run build -- -- --baseURL $DEPLOY_PRIME_URL"
+command = "hugo --baseURL $DEPLOY_PRIME_URL"

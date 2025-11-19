@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,22 +6,19 @@
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ $style := resources.Get "dist/style.css" | fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.RelPermalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-    />
+    {{ with (templates.Defer (dict "key" "global")) }}
+      {{ partial "css.html" . }}
+    {{ end }}
   </head>
 
   <body class="flex min-h-screen flex-col bg-slate-900 text-slate-100">
     <header>
       {{ block "header" . }}
         <nav
-          class="mb-8 bg-zinc-800 p-2 text-sm font-semibold leading-6 text-slate-200 shadow-md lg:text-lg"
+          class="mb-8 bg-zinc-800 p-2 text-sm leading-6 font-semibold text-slate-200 shadow-md lg:text-lg"
         >
           <ul class="mx-auto flex max-w-3xl space-x-8 px-4">
-            <li class="flex-grow">
+            <li class="grow">
               <a
                 class="transition-colors hover:text-blue-500 hover:underline hover:decoration-blue-500"
                 href="/"
@@ -41,12 +38,12 @@
         </nav>
       {{ end }}
     </header>
-    <main class="flex-grow">
+    <main class="grow">
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="bg-zinc-800">
       {{ block "footer" . }}
-        <nav class="mx-auto max-w-3xl pb-4 pt-2">
+        <nav class="mx-auto max-w-3xl pt-2 pb-4">
           <ul class="flex justify-center space-x-8">
             <li>
               <a

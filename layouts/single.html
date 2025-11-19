@@ -7,7 +7,7 @@
       {{ $publishDate := .PublishDate | time.Format ":date_long" }}
       {{ $updateDate := .Lastmod | time.Format ":date_long" }}
       {{ $showUpdate := and (gt .Lastmod .PublishDate) (ne $publishDate $updateDate) }}
-      <h2 class="mb-4 uppercase text-neutral-500">
+      <h2 class="mb-4 text-neutral-500 uppercase">
         {{ $publishDate }}
         {{ if $showUpdate }}
           &mdash; Updated
