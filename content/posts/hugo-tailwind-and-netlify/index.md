@@ -1,6 +1,7 @@
 ---
 title: "Hugo, Tailwind, and Netlify"
 date: 2023-04-27T17:20:21Z
+modified: 2025-11-19
 tags:
   - Hugo
   - Netlify
@@ -13,6 +14,14 @@ revamp this site, which was already built with [Hugo][hugo] and deployed on
 [Netlify][netlify]. Here's the configuration I ended up with.
 
 <!--more-->
+
+---
+
+_**Note:** As of v0.128.0, Hugo provides explicit integration with Tailwind. I
+recommend doing what this site does and [following their new
+documentation][hugo-tailwind] instead of the setup described below._
+
+---
 
 Assuming there's an existing Hugo site, start by initializing an `npm` package.
 
@@ -161,6 +170,7 @@ version][netlify-hugo-version].
 [concurrently]: https://www.npmjs.com/package/concurrently
 [hugo]: https://gohugo.io
 [hugo-postcss]: https://gohugo.io/hugo-pipes/postcss/
+[hugo-tailwind]: https://gohugo.io/functions/css/tailwindcss/
 [netlify]: https://www.netlify.com/
 [netlify-hugo-version]:
   https://docs.netlify.com/integrations/frameworks/hugo/#hugo-version

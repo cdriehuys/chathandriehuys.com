@@ -7,6 +7,7 @@ public/
 # Generated resources
 assets/dist
 resources/
+hugo_stats.json
 
 # Hugo lockfile
 .hugo_build.lock

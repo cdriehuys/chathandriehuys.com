@@ -4,12 +4,8 @@
   "private": true,
   "description": "Personal website.",
   "scripts": {
-    "build": "npm run build:css && npm run build:site",
-    "build:css": "postcss assets/global.css -o assets/dist/style.css",
-    "build:site": "hugo",
-    "dev": "concurrently --prefix-colors auto \"npm:dev:*\"",
-    "dev:css": "npm run build:css -- --watch",
-    "dev:server": "hugo server --buildDrafts",
+    "build": "hugo",
+    "dev": "hugo server --buildDrafts",
     "prepare": "husky install",
     "style:check": "prettier --check .",
     "style:fix": "prettier --write .",
@@ -24,18 +20,15 @@
   },
   "homepage": "https://github.com/cdriehuys/chathandriehuys.com#readme",
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.1"
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/typography": "^0.5.19",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "concurrently": "^8.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
-    "prettier-plugin-go-template": "^0.0.13",
-    "prettier-plugin-tailwindcss": "^0.2.7"
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.7.1"
   }
 }
