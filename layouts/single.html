@@ -2,6 +2,7 @@
 
 {{ define "main" }}
   <div class="mx-auto mb-8 max-w-prose px-4 lg:max-w-4xl">
+    {{ partial "breadcrumbs.html" . }}
     <section class="mb-8">
       <h1 class="mb-4 text-4xl">{{ .Title }}</h1>
       {{ $publishDate := .PublishDate | time.Format ":date_long" }}

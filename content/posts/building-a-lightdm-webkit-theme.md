@@ -10,6 +10,8 @@ I recently built [a custom LightDM greeter theme][custom-theme], and there
 wasn't a whole lot of info I found on how to do this, so I wanted to jot down
 some tips.
 
+<!--more-->
+
 LightDM has the concept of greeters, which are the user's entrypoint into a
 graphical session. One of these greeters is `lightdm-webkit2-greeter` which
 allows your greeter to be created using standard web technologies. This is great
