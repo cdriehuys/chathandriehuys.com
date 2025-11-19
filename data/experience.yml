@@ -1,5 +1,11 @@
 ---
 jobs:
+  - name: SAS
+    description:
+      Full stack web developer for SAS Intelligent Decisioning, a product for
+      the SAS Viya platform. Java and Go REST APIs powering a React UI, deployed
+      on Kubernetes.
+
   - name: Capital One
     description:
       Software developer creating a platform for running ETL jobs using Python
@@ -10,9 +16,3 @@ jobs:
       Full stack web developer on the notifications team. We provided
       notifications APIs to both internal and external consumers for Slack,
       desktop, and mobile targets.
-
-  - name: SAS
-    description:
-      Full stack web developer for SAS Intelligent Decisioning. We built a web
-      app allowing users to build data pipelines represented as a flowchart that
-      could then be published as executable code to various targets.
