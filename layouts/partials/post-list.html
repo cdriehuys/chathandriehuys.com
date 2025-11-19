@@ -1,19 +1,23 @@
 {{ with . }}
   <ul>
     {{ range . }}
-      <li class="mb-6">
+      <li
+        class="mb-6 rounded-md bg-zinc-800 p-4 shadow transition-shadow hover:shadow-lg"
+      >
         <h3 class="mb-2 text-lg">
           <a class="text-blue-500 underline" href="{{ .RelPermalink }}"
             >{{ .Title }}</a
           >
-          &mdash;
-          {{ .Date | time.Format ":date_long" }}
         </h3>
+
+        <p class="mb-2 text-sm uppercase text-slate-300">
+          {{ .Date | time.Format ":date_long" }}
+        </p>
 
         {{ partial "tag-list.html" (.GetTerms "tags") }}
 
 
-        <p class="text-slate-400">{{ .Summary | plainify | htmlUnescape }}</p>
+        <p>{{ .Summary | plainify | htmlUnescape }}</p>
       </li>
     {{ end }}
   </ul>
