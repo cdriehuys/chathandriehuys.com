@@ -1,5 +1,7 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
 {{ define "main" }}
-  <div class="p-2 text-slate-100 md:text-lg">
+  <div class="p-4 text-slate-100 md:text-lg">
     <div class="mx-auto max-w-2xl">
       <section
         class="mb-16 text-center md:flex md:items-center md:justify-between md:text-left"
@@ -26,44 +28,15 @@
         />
       </section>
 
-      <section class="mb-16">
-        <h2
-          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
-        >
-          About Me
-        </h2>
-        <p class="mb-2">
-          Hi, I&apos;m <b>Chathan Driehuys</b>, a software developer from North
-          Carolina. I build performant software with focuses on correctness
-          through automation and efficient developer experiences.
-        </p>
-        <p>
-          Outside of work, I enjoy rock climbing, disc golfing, video gaming,
-          and flying airplanes.
-        </p>
+      <section
+        class="prose prose-lg prose-invert prose-headings:underline prose-headings:decoration-blue-500 prose-headings:text-center mb-16"
+      >
+        {{ .Content }}
       </section>
 
       <section class="mb-16">
         <h2
-          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
-        >
-          Experience
-        </h2>
-        {{ with $.Site.Data.experience.jobs }}
-          <ul class="list-inside list-disc">
-            {{ range . }}
-              <li class="mb-2">
-                <span class="font-bold">{{ .name }}</span> &ndash;
-                {{ .description }}
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      </section>
-
-      <section class="mb-16">
-        <h2
-          class="mb-8 text-center text-2xl underline decoration-blue-500 md:text-3xl"
+          class="mb-8 text-center text-3xl text-[1.66666667em] font-bold underline decoration-blue-500"
         >
           Contact Me
         </h2>

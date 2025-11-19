@@ -2,6 +2,9 @@
 
 {{ define "main" }}
   <div class="mx-auto max-w-prose px-4 lg:max-w-2xl">
+    {{ partial "breadcrumbs.html" . }}
+
+
     <section class="mb-8">
       <h1 class="mb-6 text-4xl">{{ .Title }}</h1>
       <p class="text-lg">

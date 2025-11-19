@@ -10,6 +10,8 @@ I recently installed Arch on my laptop, and while it went about as smoothly as a
 fresh OS install can go, there were a few footguns I ran into that I wanted to
 document.
 
+<!--more-->
+
 ## Preparation
 
 If there is wiki information about the specific hardware you are installing Arch

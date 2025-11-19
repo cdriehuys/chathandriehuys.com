@@ -15,6 +15,8 @@ I recently tried to use Netlify's managed DNS with a domain name registered
 through AWS and struggled. While it turned out that I was being a bit of an
 idiot, I figured I would share the problem and solution here.
 
+<!--more-->
+
 ## First Attempt
 
 As the instructions state when you attempt to register an externally managed
