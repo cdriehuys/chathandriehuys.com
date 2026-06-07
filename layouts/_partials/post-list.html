@@ -8,6 +8,9 @@
           <a class="text-blue-500 underline" href="{{ .RelPermalink }}"
             >{{ .Title }}</a
           >
+          {{ if .Draft }}
+            {{ partial "draft-tag.html" }}
+          {{ end }}
         </h3>
 
         <p class="mb-2 text-sm text-slate-300 uppercase">

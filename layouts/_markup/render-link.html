@@ -1,5 +1,6 @@
 {{ $isExternal := strings.HasPrefix .Destination "http" }}
 <a
+  {{ if $isExternal }}class="after:ml-0.5 after:content-['_↗']"{{ end -}}
   href="{{ .Destination | safeURL }}"
   {{ with .Title -}}
     title="{{ . }}"
