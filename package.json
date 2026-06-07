@@ -4,8 +4,6 @@
   "private": true,
   "description": "Personal website.",
   "scripts": {
-    "build": "hugo",
-    "dev": "hugo server --buildDrafts",
     "prepare": "husky install",
     "style:check": "prettier --check .",
     "style:fix": "prettier --write .",

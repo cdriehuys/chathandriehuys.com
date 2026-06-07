@@ -4,6 +4,7 @@ date: 2023-08-02T14:25:55Z
 modified: 2023-11-22
 tags:
   - Arch Linux
+  - Linux
 ---
 
 I recently installed Arch on my laptop, and while it went about as smoothly as a
