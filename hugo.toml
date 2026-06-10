@@ -4,6 +4,8 @@ title = 'Chathan Driehuys - Software Developer'
 
 summaryLength = 50
 
+enableRobotsTXT = true
+
 [markup.goldmark.renderer]
 unsafe = true
 
